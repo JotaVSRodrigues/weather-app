@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class AppLauncher
 {
-    public static void main( String[] args ) {
+    public static void main( String[] args ) throws HeadlessException{
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -16,9 +16,3 @@ public class AppLauncher
         });
     }
 }
-
-//        if (!GraphicsEnvironment.isHeadless()) {
-//        new WeatherAppGui();
-//        } else {
-//                System.out.println("Rodando em modo headless");
-//        }
