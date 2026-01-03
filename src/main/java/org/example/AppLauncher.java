@@ -12,6 +12,9 @@ public class AppLauncher
             public void run() {
                 // display our weather app gui
                 new WeatherAppGui().setVisible(true);
+
+                WeatherApp test = new WeatherApp();
+                System.out.println(test.omdbConnection("Interstellar"));
             }
         });
     }

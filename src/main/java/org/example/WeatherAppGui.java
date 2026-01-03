@@ -1,7 +1,5 @@
 package org.example;
 
-import com.sun.org.apache.xml.internal.serialize.XHTMLSerializer;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
