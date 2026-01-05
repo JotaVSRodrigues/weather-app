@@ -32,7 +32,9 @@ public class WeatherAppNew {
                 "&hourly=temperature_2m,weather_code,relative_humidity_2m,wind_speed_10m&timezone=America%2FSao_Paulo";
         try {
             JSONObject hourly = (JSONObject) conn(urlString).get("hourly");
-
+            if (hourly == null){
+                System.out.println("hourly é nulo");
+            }
             /*
             * We want to get the current hours data
             * so we need to get the index of our current hour
@@ -45,15 +47,15 @@ public class WeatherAppNew {
             double temperature = (double) temperatureData.get(index);
 
             // get weather code
-            JSONArray weatherCode = (JSONArray) hourly.get("weathercode");
+            JSONArray weatherCode = (JSONArray) hourly.get("weather_code");
             String weatherCondition = convertWeatherCode((long) weatherCode.get(index));
 
             // get humidity
-            JSONArray relativeHumidity = (JSONArray) hourly.get("relativehumidity_2m");
+            JSONArray relativeHumidity = (JSONArray) hourly.get("relative_humidity_2m");
             long humidity = (long) relativeHumidity.get(index);
 
             // get windspeed
-            JSONArray windSpeedData = (JSONArray) hourly.get("windspeed_10m");
+            JSONArray windSpeedData = (JSONArray) hourly.get("wind_speed_10m");
             double windSpeed = (double) windSpeedData.get(index);
 
             // build the weather json data object that we are going to access
@@ -64,6 +66,7 @@ public class WeatherAppNew {
             weatherData.put("wind_speed", windSpeed);
 
             return weatherData;
+
         } catch (Exception e) {
             e.printStackTrace();
         }
