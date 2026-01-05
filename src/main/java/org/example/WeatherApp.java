@@ -1,5 +1,6 @@
 package org.example;
 
+/*
 import com.google.gson.Gson;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -20,7 +21,7 @@ public class WeatherApp {
     classe que estabelece conexão com as API's e retorna objetos JSON, que serão
     tratados e atualizados na interface GUI
     */
-
+/*
     // method that stabilish connection with API
     public JSONArray apiConnection(String urlPath) {
         urlPath = urlPath.replace(" ", "+");
@@ -88,3 +89,4 @@ public class WeatherApp {
         return "API do omdb não está funcionando";
     }
 }
+*/
