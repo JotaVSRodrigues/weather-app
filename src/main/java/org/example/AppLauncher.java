@@ -13,8 +13,9 @@ public class AppLauncher
                 // display our weather app gui
                 new WeatherAppGui().setVisible(true);
 
-                WeatherApp test = new WeatherApp();
-                System.out.println(test.omdbConnection("Interstellar"));
+                // System.out.println(WeatherAppNew.getLocationData("Tokyo"));
+
+                // System.out.println(WeatherAppNew.getCurrentTime());
             }
         });
     }
