@@ -25,7 +25,7 @@ O **Weather App** é uma aplicação desktop desenvolvida em Java com interface 
 
 ### Capturas de Tela
 
-| Tela Principal | Resultado da Busca |
+| Busca - New York | Busca - Tokyo |
 |----------------|-------------------|
 | ![Home](docs/image.png) | ![Home](docs/cloudy-example.png) | 
 
